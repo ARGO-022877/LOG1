@@ -1,0 +1,24 @@
+{
+  "agent": {
+    "name": "Infrastructure Architect AI",
+    "engine": "Gemini Code Assist"
+  },
+  "project": {
+    "id": "iness-467105",
+    "gcp_organization_id": "38646727271",
+    "gcp_organization_domain": "argo.ai.kr",
+    "github_repo_owner": "ARGO-022877",
+    "github_repo_name": "LOG1"
+  },
+  "environment": {
+    "type": "Google Cloud IDE",
+    "working_directory": "/home/g6siegfriex/LOG1/",
+    "gcp_region": "us-central1"
+  },
+  "task_specific": {
+    "current_phase": "Phase 0: PoC",
+    "current_task_id": "poc_t1_risk_verification",
+    "output_directory": "poc/t1_risk_verification",
+    "gcp_secret_id": "maumlog-v4-poc-secret"
+  }
+}
