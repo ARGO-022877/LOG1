@@ -1,0 +1,12 @@
+[33m95d2ff5[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m feat: Stage 3 Phase 0 PoC 핵심 기능 완성
+[33mcb3eb51[m merge: Infrastructure Architect AI의 Neo4j 인프라 및 T1 리스크 검증 결과 통합
+[33mef03949[m feat: Infrastructure Architect AI 임무 완수 - Neo4j Brain & T1 검증 완료
+[33m26df475[m feat: Neo4j Seed Content 생성 스크립트 완성
+[33mdf86cd5[m docs: 제미나이 애플리케이션 개발자 에이전트 초기화 컨텍스트 및 프롬프트 생성
+[33m3049d4c[m docs: LOG1 팀스페이스 노션 분석 및 현황 보고서 완성 �
+[33mfbf60d5[m merge: 원격 변경사항과 지식 아키텍처 병합
+[33m8e3da83[m feat: 고도화된 지식 생성 아키텍처 설계 완료
+[33mebee8b7[m[33m ([m[1;31morigin/feature/t1-risk-verification-poc[m[33m, [m[1;32mfeature/t1-risk-verification-poc[m[33m)[m Merge branch 'main' of https://github.com/ARGO-022877/LOG1
+[33mff4e7a3[m feat: Add T1 Risk Verification PoC for secure state transfer
+[33ma489718[m feat: 프로젝트 설정 및 Neo4j 연결 구성 완료
+[33m974f84f[m feat: Phase 0 PoC - 지식 생성 아키텍처 Neo4j 스키마 설계
