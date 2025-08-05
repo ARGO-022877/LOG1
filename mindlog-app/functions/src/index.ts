@@ -165,6 +165,9 @@ function convertNaturalLanguageToCypher(query: string): string {
   return 'MATCH (n) RETURN n LIMIT 20';
 }
 
+// Export realtime functions
+export * from './realtime';
+
 // Cleanup function
 process.on('SIGTERM', async () => {
   if (neo4jDriver) {

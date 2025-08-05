@@ -2,6 +2,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import BottomNavigationBar from '@/components/BottomNavigationBar';
+import { AuthProvider } from '@/contexts/AuthContext';
 
 export const metadata: Metadata = {
   title: '마음일기 V4.0',
@@ -16,10 +17,12 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className="font-sans">
-        <div className="pb-16">
-          {children}
-        </div>
-        <BottomNavigationBar />
+        <AuthProvider>
+          <div className="pb-16">
+            {children}
+          </div>
+          <BottomNavigationBar />
+        </AuthProvider>
       </body>
     </html>
   );

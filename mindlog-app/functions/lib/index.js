@@ -32,6 +32,9 @@ var __importStar = (this && this.__importStar) || (function () {
         return result;
     };
 })();
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.queryKnowledge = void 0;
 const https_1 = require("firebase-functions/v2/https");
@@ -166,6 +169,8 @@ function convertNaturalLanguageToCypher(query) {
     // Default query for general exploration
     return 'MATCH (n) RETURN n LIMIT 20';
 }
+// Export realtime functions
+__exportStar(require("./realtime"), exports);
 // Cleanup function
 process.on('SIGTERM', async () => {
     if (neo4jDriver) {
