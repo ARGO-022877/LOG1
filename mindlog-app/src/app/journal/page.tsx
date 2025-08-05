@@ -8,7 +8,7 @@ export default function JournalPage() {
         <BookOpen className="h-10 w-10 text-primary" />
         <div>
           <h1 className="text-h1 font-bold">기록</h1>
-          <p className="text-body-lg text-text-secondary">"기록의 강"에서 과거의 감정들을 탐색하세요.</p>
+          <p className="text-body-lg text-text-secondary">&ldquo;기록의 강&rdquo;에서 과거의 감정들을 탐색하세요.</p>
         </div>
       </header>
       

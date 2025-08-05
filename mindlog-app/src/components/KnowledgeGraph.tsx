@@ -84,8 +84,8 @@ export default function KnowledgeGraph({ data }: KnowledgeGraphProps) {
 
   if (!data) {
     return (
-      <div className="w-full h-96 border border-gray-300 rounded-lg flex items-center justify-center bg-gray-50">
-        <p className="text-gray-500">질문을 입력하면 지식 그래프가 여기에 표시됩니다</p>
+      <div className="w-full h-96 border border-gray-300 rounded-lg flex items-center justify-center bg-surface-secondary">
+        <p className="text-text-secondary">질문을 입력하면 지식 그래프가 여기에 표시됩니다</p>
       </div>
     );
   }
@@ -93,8 +93,8 @@ export default function KnowledgeGraph({ data }: KnowledgeGraphProps) {
   return (
     <div className="w-full border border-gray-300 rounded-lg bg-white">
       <div className="p-4 border-b border-gray-200">
-        <h3 className="text-lg font-semibold text-gray-900">지식 그래프 시각화</h3>
-        <p className="text-sm text-gray-600">
+        <h3 className="text-h3 font-bold text-text-primary">지식 그래프 시각화</h3>
+        <p className="text-body text-text-secondary">
           노드: {data.nodes.length}개, 관계: {data.relationships.length}개
         </p>
       </div>

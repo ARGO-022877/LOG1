@@ -31,15 +31,15 @@ export default function QueryInput({ onSubmit, isLoading = false }: QueryInputPr
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="자연어로 질문해보세요... (예: '프로젝트의 주요 구성요소는 무엇인가요?')"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-gray-900 placeholder-gray-500"
+            placeholder="자연어로 질문해보세요... (예: '감정과 활동 간의 관계를 보여줘')"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent outline-none text-text-primary placeholder-text-secondary"
             disabled={isLoading}
           />
         </div>
         <button
           type="submit"
           disabled={!query.trim() || isLoading}
-          className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center gap-2 transition-colors"
+          className="px-6 py-3 bg-secondary text-white rounded-lg hover:bg-secondary/80 disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center gap-2 transition-all duration-fast hover:scale-105"
         >
           {isLoading ? (
             <Loader2 className="w-5 h-5 animate-spin" />

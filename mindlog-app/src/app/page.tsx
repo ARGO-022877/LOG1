@@ -2,10 +2,10 @@
 'use client';
 
 import { useState } from 'react';
-import { Compass, Leaf, Home, BookOpen, Lightbulb, Shield, User } from 'lucide-react';
+import { Compass, Leaf } from 'lucide-react';
 
 export default function Home() {
-  const [xp, setXp] = useState(65);
+  const [xp] = useState(65);
   const xpMax = 100;
   const [selectedEmotion, setSelectedEmotion] = useState<string | null>(null);
 

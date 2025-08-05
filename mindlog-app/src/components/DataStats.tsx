@@ -18,11 +18,11 @@ export default function DataStats({ data }: DataStatsProps) {
           { icon: FileText, label: '문서', value: 0, color: 'purple' },
           { icon: Users, label: '개념', value: 0, color: 'orange' }
         ].map((stat, index) => (
-          <div key={index} className="bg-white p-6 rounded-lg border border-gray-200">
+          <div key={index} className="bg-white p-6 rounded-lg shadow-base border border-gray-200">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-600">{stat.label}</p>
-                <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
+                <p className="text-body font-medium text-text-secondary">{stat.label}</p>
+                <p className="text-h2 font-bold text-text-primary">{stat.value}</p>
               </div>
               <stat.icon className={`h-8 w-8 text-${stat.color}-500`} />
             </div>
@@ -53,11 +53,11 @@ export default function DataStats({ data }: DataStatsProps) {
     <div className="mb-8">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
         {stats.map((stat, index) => (
-          <div key={index} className="bg-white p-6 rounded-lg border border-gray-200">
+          <div key={index} className="bg-white p-6 rounded-lg shadow-base border border-gray-200">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-600">{stat.label}</p>
-                <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
+                <p className="text-body font-medium text-text-secondary">{stat.label}</p>
+                <p className="text-h2 font-bold text-text-primary">{stat.value}</p>
               </div>
               <stat.icon className={`h-8 w-8 text-${stat.color}-500`} />
             </div>
@@ -66,15 +66,15 @@ export default function DataStats({ data }: DataStatsProps) {
       </div>
 
       {chartData.length > 0 && (
-        <div className="bg-white p-6 rounded-lg border border-gray-200">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">노드 타입별 분포</h3>
+        <div className="bg-white p-6 rounded-lg shadow-base border border-gray-200">
+          <h3 className="text-h3 font-bold text-text-primary mb-4">노드 타입별 분포</h3>
           <ResponsiveContainer width="100%" height={300}>
             <BarChart data={chartData}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="type" />
               <YAxis />
               <Tooltip />
-              <Bar dataKey="count" fill="#3B82F6" />
+              <Bar dataKey="count" fill="#42A5F5" />
             </BarChart>
           </ResponsiveContainer>
         </div>
