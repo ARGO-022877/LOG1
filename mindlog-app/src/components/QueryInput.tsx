@@ -31,7 +31,7 @@ export default function QueryInput({ onSubmit, isLoading = false }: QueryInputPr
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="자연어로 질문해보세요... (예: '감정과 활동 간의 관계를 보여줘')"
+            placeholder="자연어로 질문해보세요... (예: 'Python 스킬을 가진 개발자는 누구인가?')"
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent outline-none text-text-primary placeholder-text-secondary"
             disabled={isLoading}
           />

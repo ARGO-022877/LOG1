@@ -138,7 +138,9 @@ export default function InsightsPage() {
               지식 그래프 탐색
             </h2>
             <p className="text-body text-text-secondary mb-6">
-              Neo4j 기반의 지식 그래프에서 감정, 활동, 인사이트 간의 관계를 탐색합니다.
+              실제 운영 중인 AuraDB Professional에서 개발자, 스킬, 프로젝트 간의 관계를 탐색합니다.
+              <br />
+              <span className="text-accent font-semibold">✅ 12개 노드, 10개 관계 실시간 연결</span>
             </p>
             
             {/* Query Input */}

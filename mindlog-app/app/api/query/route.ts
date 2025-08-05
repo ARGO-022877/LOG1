@@ -5,7 +5,7 @@ export const dynamic = 'force-dynamic';
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { query, type = 'natural_language' } = body;
+    const { query } = body;
 
     if (!query) {
       return NextResponse.json(
@@ -14,25 +14,44 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Firebase Functions URL (you'll need to update this with your actual deployed function URL)
-    const functionsBaseUrl = process.env.FIREBASE_FUNCTIONS_URL || 'http://localhost:5001/iness-467105/us-central1';
-    const queryUrl = `${functionsBaseUrl}/queryKnowledge`;
+    // Neo4j Python API 서버 URL (실제 운영 중)
+    const apiBaseUrl = process.env.NEO4J_API_URL || 'http://localhost:5000';
+    const queryUrl = `${apiBaseUrl}/api/v1/query`;
 
-    console.log('Forwarding query to Firebase Functions:', queryUrl);
+    console.log('Forwarding query to Neo4j Knowledge Engine:', queryUrl);
 
     const response = await fetch(queryUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ query, type }),
+      body: JSON.stringify({ query }),
     });
 
     if (!response.ok) {
-      throw new Error(`Firebase Functions error: ${response.status} ${response.statusText}`);
+      throw new Error(`Neo4j API error: ${response.status} ${response.statusText}`);
     }
 
     const result = await response.json();
+    
+    // Python API 응답을 UI에서 사용할 수 있는 형태로 변환
+    if (result.success && result.data) {
+      const transformedData = {
+        success: true,
+        data: {
+          nodes: result.data.map((item: Record<string, unknown>, index: number) => ({
+            id: index.toString(),
+            label: item.name || item.title || `Item ${index}`,
+            type: 'developer',
+            properties: item
+          })),
+          relationships: []
+        },
+        message: result.message
+      };
+      return NextResponse.json(transformedData);
+    }
+    
     return NextResponse.json(result);
 
   } catch (error) {
