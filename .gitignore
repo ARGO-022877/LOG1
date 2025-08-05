@@ -1,2 +1,9 @@
 __pycache__/
 *.pyc
+.idx/
+.vscode/
+backup/
+*.log
+.env.local
+.firebase/
+node_modules/
