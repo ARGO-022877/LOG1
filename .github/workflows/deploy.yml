@@ -1,6 +1,5 @@
-
 # 마음로그 V4.0 - 배포 자동화 파이프라인
-# 수석 인프라 설계자 Gemini에 의해 설계됨 (Protocol 3)
+# 수석 인프라 설계자 Gemini에 의해 설계됨 (Protocol 3) - 수정됨
 
 name: Deploy to Firebase Hosting
 
@@ -13,6 +12,9 @@ jobs:
   build-and-test:
     name: Build and Test
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./mindlog-app
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -35,6 +37,9 @@ jobs:
     name: Deploy to Firebase
     needs: build-and-test
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./mindlog-app
     permissions:
       contents: 'read'
       id-token: 'write'
