@@ -7,3 +7,9 @@ backup/
 .env.local
 .firebase/
 node_modules/
+
+# Gemini AI operational files
+context_protocol.txt
+local_context.json
+context_log.json
+gh_*/
