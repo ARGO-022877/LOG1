@@ -42,6 +42,5 @@ jobs:
       - name: Deploy to Firebase Hosting
         working-directory: ./mindlog-app
         run: |
-          export GOOGLE_APPLICATION_CREDENTIALS="${GOOGLE_APPLICATION_CREDENTIALS}"
-          firebase experiments:enable webframeworks --project iness-467105
-          firebase deploy --only hosting --project iness-467105
+          firebase experiments:enable webframeworks
+          firebase deploy --only hosting
