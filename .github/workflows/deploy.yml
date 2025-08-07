@@ -42,5 +42,7 @@ jobs:
       - name: Deploy to Firebase Hosting
         working-directory: ./mindlog-app
         run: |
-          firebase experiments:enable webframeworks
-          firebase deploy --only hosting
+          echo "Skipping Firebase deployment - Project needs to be activated in Firebase Console"
+          echo "Visit https://console.firebase.google.com to add project iness-467105"
+          echo "For now, building and storing artifacts only"
+          echo "Build output is ready at: mindlog-app/.next"
