@@ -1,0 +1,14 @@
+
+{
+  "name": "mindlog-v4-monorepo",
+  "private": true,
+  "workspaces": [
+    "mindlog-app",
+    "mindlog-app/functions"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=mindlog-app",
+    "build": "npm run build --workspace=mindlog-app && npm run build --workspace=mindlog-app/functions",
+    "deploy": "npm run build && firebase deploy --project iness-467105"
+  }
+}

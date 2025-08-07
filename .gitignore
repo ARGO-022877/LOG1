@@ -9,6 +9,7 @@ backup/
 node_modules/
 
 # Gemini AI operational files
+.gemini/
 context_protocol.txt
 local_context.json
 context_log.json
